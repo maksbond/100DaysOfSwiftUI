@@ -4,7 +4,7 @@
 
 Day 1 was concentrated on variables, constants, strings, and numbers.
 
-## Results
+## Tests
 
 I watched all videos and completed all tests.
 Here is tests results:
