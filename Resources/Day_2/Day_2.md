@@ -24,4 +24,4 @@ Here is tests results:
 ## Checkpoints
 
 Today, I completed my first checkpoint. It was simple but interesting task with temperature converter.
-Playground is located [there](/Resources/Day_2/Checkpoints/Checkpoint1.playground)
+Playground is located [here](/Resources/Day_2/Checkpoints/Checkpoint1.playground)
