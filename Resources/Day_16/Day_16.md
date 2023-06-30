@@ -16,4 +16,4 @@ Day 16 was a first part of WeSplit SwiftUI app.
 
 ## Resources
 
-You can find clean project (as asked by Paul) [here](/Resources/Day_16/Sources)
+You can find clean project (as asked by Paul) [here](/Sources/WeSplit/)
