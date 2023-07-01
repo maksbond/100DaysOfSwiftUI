@@ -15,4 +15,4 @@ Day 17 was a second part of WeSplit SwiftUI app work.
 
 ## Resources
 
-You can find clean project (as asked by Paul) [here](/Sources/WeSplit/)
+You can find project 1 [here](/Sources/WeSplit/)
