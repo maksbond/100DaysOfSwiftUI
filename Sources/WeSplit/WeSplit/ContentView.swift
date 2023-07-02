@@ -6,26 +6,19 @@
 //
 
 import SwiftUI
+import TabularData
 
 struct ContentView: View {
     @State private var checkAmount = 0.0
     @State private var numberOfPeople = 2
-    @State private var tipPercentage = 20
+    @State private var tipPercentage = 0
     @FocusState private var amountIsFocused: Bool
-    
-    let tipPercentages = [10, 15, 20, 25, 0]
-
-    var totalPerPerson: Double {
-        let peopleCount = Double(numberOfPeople + 2)
-        let tipSelection = Double(tipPercentage)
-        return checkAmount * (1 + tipSelection / 100) / peopleCount
-    }
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Form {
                 Section {
-                    TextField("Amount", value: $checkAmount, format: .currency(code: Locale.current.currencyCode ?? "CAD"))
+                    TextField("Amount", value: $checkAmount, format: currencyFormat)
                         .keyboardType(.decimalPad)
                         .focused($amountIsFocused)
 
@@ -38,17 +31,25 @@ struct ContentView: View {
 
                 Section {
                     Picker("Tip percentage", selection: $tipPercentage) {
-                        ForEach(tipPercentages, id: \.self) {
+                        ForEach(0..<101) {
                             Text($0, format: .percent)
                         }
                     }
-                    .pickerStyle(.segmented)
+                    .pickerStyle(.navigationLink)
                 } header: {
                     Text("How much tip do you want to leave?")
                 }
 
                 Section {
-                    Text(totalPerPerson, format: .currency(code: Locale.current.currencyCode ?? "CAD"))
+                    Text(totalPerPerson, format: currencyFormat)
+                } header: {
+                    Text("Amount per person")
+                }
+
+                Section {
+                    Text(totalAmount, format: currencyFormat)
+                } header: {
+                    Text("Total amount")
                 }
             }
             .navigationTitle("WeSplit")
@@ -62,6 +63,22 @@ struct ContentView: View {
                 }
             }
         }
+    }
+}
+
+private extension ContentView {
+    var totalAmount: Double {
+        let tipSelection = Double(tipPercentage)
+        return checkAmount * (1 + tipSelection / 100)
+    }
+
+    var totalPerPerson: Double {
+        let peopleCount = Double(numberOfPeople + 2)
+        return totalAmount / peopleCount
+    }
+
+    var currencyFormat: FloatingPointFormatStyle<Double>.Currency {
+        FloatingPointFormatStyle<Double>.Currency(code: Locale.current.currency?.identifier ?? "CAD")
     }
 }
 
