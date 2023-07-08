@@ -15,4 +15,4 @@ Day 20 was part one of a new app creation process - Guess the Flag.
 
 ## Resources
 
-You can find GuestTheFlag [here](/Sources/GuestTheFlag/)
+You can find GuessTheFlag [here](/Sources/GuessTheFlag/)
