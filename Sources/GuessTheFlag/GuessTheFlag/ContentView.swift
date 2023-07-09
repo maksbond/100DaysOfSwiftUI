@@ -9,11 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showingScore = false
+    @State private var resetGame = false
     @State private var scoreTitle = ""
+    @State private var selectedCountry = ""
     @State private var score = 0
+    @State private var gamesCounter = 0
 
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Spain", "UK", "US"].shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
+
+    private let maxGamesCount = 8
 
     var body: some View {
         ZStack {
@@ -68,26 +73,37 @@ struct ContentView: View {
             .padding()
         }
         .alert(scoreTitle, isPresented: $showingScore) {
-            Button("Continue", action: askQuestion)
+            Button(resetGame ? "Reset" : "Continue",
+                   role: resetGame ? .destructive : nil,
+                   action: resetGame ? resetAction : askQuestion)
         } message: {
-            Text("Your score is \(score)")
+            Text("\(selectedCountry.isEmpty ? "" : "That's the flag of \(selectedCountry)!\n")Your score is \(score)!\(resetGame ? "\nNow is time to reset game!" : "")")
         }
     }
 
     func flagTapped(_ flag: Int) {
+        gamesCounter += 1
         if flag == correctAnswer {
-            scoreTitle = "Correct"
+            scoreTitle = "Correct!"
             score += 1
+            selectedCountry = ""
         } else {
-            scoreTitle = "Wrong"
+            scoreTitle = "Wrong!"
+            selectedCountry = countries[flag]
         }
 
         showingScore = true
+        resetGame = gamesCounter >= maxGamesCount
     }
 
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+    }
+
+    func resetAction() {
+        score = 0
+        askQuestion()
     }
 }
 
