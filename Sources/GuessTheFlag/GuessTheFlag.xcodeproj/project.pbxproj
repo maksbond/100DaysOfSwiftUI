@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A9DFAC42A61C6E000B801C5 /* FlagImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9DFAC32A61C6E000B801C5 /* FlagImage.swift */; };
 		7AE8E2D92A578A0300F790E4 /* GuessTheFlagApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8E2D82A578A0300F790E4 /* GuessTheFlagApp.swift */; };
 		7AE8E2DB2A578A0300F790E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE8E2DA2A578A0300F790E4 /* ContentView.swift */; };
 		7AE8E2DD2A578A0500F790E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AE8E2DC2A578A0500F790E4 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A9DFAC32A61C6E000B801C5 /* FlagImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagImage.swift; sourceTree = "<group>"; };
 		7AE8E2D52A578A0300F790E4 /* GuessTheFlag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheFlag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AE8E2D82A578A0300F790E4 /* GuessTheFlagApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlagApp.swift; sourceTree = "<group>"; };
 		7AE8E2DA2A578A0300F790E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +34,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A9DFAC22A61C6C300B801C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7AE8E2DA2A578A0300F790E4 /* ContentView.swift */,
+				7A9DFAC32A61C6E000B801C5 /* FlagImage.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		7AE8E2CC2A578A0300F790E4 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +62,8 @@
 		7AE8E2D72A578A0300F790E4 /* GuessTheFlag */ = {
 			isa = PBXGroup;
 			children = (
+				7A9DFAC22A61C6C300B801C5 /* Views */,
 				7AE8E2D82A578A0300F790E4 /* GuessTheFlagApp.swift */,
-				7AE8E2DA2A578A0300F790E4 /* ContentView.swift */,
 				7AE8E2DC2A578A0500F790E4 /* Assets.xcassets */,
 				7AE8E2DE2A578A0500F790E4 /* Preview Content */,
 			);
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7AE8E2DB2A578A0300F790E4 /* ContentView.swift in Sources */,
+				7A9DFAC42A61C6E000B801C5 /* FlagImage.swift in Sources */,
 				7AE8E2D92A578A0300F790E4 /* GuessTheFlagApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
