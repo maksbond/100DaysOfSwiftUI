@@ -14,6 +14,6 @@ Day 26 was first part of project 4.
 
 ## Resources
 
-You can find trained model [here](/Resources/Day_26/BetterRest.mlmodel)
+You can find trained model [here](/Resources/Day_26/SleepCalculator.mlmodel)
 
 You can find new project [here](/Sources/BetterRest/)
