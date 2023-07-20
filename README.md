@@ -32,11 +32,11 @@ This repository will be used to track my progress with [100 Days of SwiftUI](htt
 * [Day 24](/Resources/Day_24/Day_24.md)
 * [Day 25](/Resources/Day_25/Day_25.md)
 * [Day 26](/Resources/Day_26/Day_26.md)
-* [Day 26](/Resources/Day_27/Day_27.md)
+* [Day 27](/Resources/Day_27/Day_27.md)
+* [Day 28](/Resources/Day_28/Day_28.md)
 
 ## Days left
 
-* [Day 28](/Resources/404.png)
 * [Day 29](/Resources/404.png)
 * [Day 30](/Resources/404.png)
 * [Day 31](/Resources/404.png)
@@ -46,5 +46,6 @@ This repository will be used to track my progress with [100 Days of SwiftUI](htt
 * [Day 35](/Resources/404.png)
 * [Day 36](/Resources/404.png)
 * [Day 37](/Resources/404.png)
+* [Day 38](/Resources/404.png)
 ...
 * [Day 100](/Resources/404.png)
