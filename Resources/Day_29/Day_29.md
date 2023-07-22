@@ -2,7 +2,7 @@
 
 ## Description
 
-Day 29 was first part of project a new project - WordScramble!
+Day 29 was first part of a new project - WordScramble!
 ## Tasks
 
 1. Word Scramble - Intoduction. I created a new project!
