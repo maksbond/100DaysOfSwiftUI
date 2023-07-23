@@ -11,6 +11,8 @@ struct ContentView: View {
     @State private var usedWords = [String]()
     @State private var rootWord = ""
     @State private var newWord = ""
+    @State private var score = 0
+    @State private var letters = 0
 
     @State private var allWords = [String]()
 
@@ -25,6 +27,23 @@ struct ContentView: View {
                     TextField("Enter your word", text: $newWord)
                         .textInputAutocapitalization(.never)
                         .onSubmit(addNewWord)
+                }
+
+                Section("User Score") {
+                    VStack {
+                        HStack {
+                            Text("Total guessed words: ")
+                            Spacer()
+                            Text("\(score)")
+                                .font(.largeTitle.bold())
+                        }
+                        HStack {
+                            Text("Total guessed letters: ")
+                            Spacer()
+                            Text("\(letters)")
+                                .font(.largeTitle.bold())
+                        }
+                    }
                 }
 
                 Section {
@@ -43,6 +62,9 @@ struct ContentView: View {
             } message: {
                 Text(errorMessage)
             }
+            .toolbar {
+                Button("Restart", action: restartGame)
+            }
         }
     }
 }
@@ -51,7 +73,13 @@ private extension ContentView {
     func addNewWord() {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
 
-        guard !answer.isEmpty else {
+        guard !isShort(word: answer) else {
+            wordError(title: "Word is too short", message: "Please, pick longer word!")
+             return
+        }
+
+        guard !isStart(word: answer) else {
+            wordError(title: "Word is identical", message: "Be more original!")
              return
         }
 
@@ -71,9 +99,11 @@ private extension ContentView {
         }
 
         withAnimation {
+            score += 1
+            letters += answer.count
             usedWords.insert(answer, at: 0)
+            newWord = ""
         }
-        newWord = ""
     }
 
     func startGame() {
@@ -84,7 +114,25 @@ private extension ContentView {
             fatalError("Can't load start.txt words")
         }
         allWords = startWords.components(separatedBy: "\n")
-        rootWord = allWords.randomElement() ?? "silkworm"
+        restartGame()
+    }
+
+    func restartGame() {
+        withAnimation {
+            rootWord = allWords.randomElement() ?? "silkworm"
+            newWord = ""
+            usedWords = []
+            score = 0
+            letters = 0
+        }
+    }
+
+    func isShort(word: String) -> Bool {
+        word.count < 3
+    }
+
+    func isStart(word: String) -> Bool {
+        rootWord == word
     }
 
     func isOriginal(word: String) -> Bool {
