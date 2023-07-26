@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var enabled = false
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        Button("Tap Me") {
+            enabled.toggle()
         }
-        .padding()
+        .frame(width: 200, height: 200)
+        .background(enabled ? .blue : .red)
+        .animation(.default, value: enabled)
+        .foregroundColor(.white)
+        .clipShape(RoundedRectangle(cornerRadius: enabled ? 32 : 0.0))
+        .animation(.interpolatingSpring(stiffness: 20, damping: 5), value: enabled)
     }
 }
 
