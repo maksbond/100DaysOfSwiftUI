@@ -18,6 +18,10 @@ struct ContentView: View {
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Spain", "UK", "US"].shuffled()
     @State private var correctAnswer = Int.random(in: 0...2)
 
+    // animations
+    @State private var tappedFlag: Int?
+    @State private var isFadeOut = false
+
     private let maxGamesCount = 8
 
     var body: some View {
@@ -50,6 +54,9 @@ struct ContentView: View {
                             flagTapped(flag)
                         } label: {
                             FlagImage(flagName: countries[flag])
+                                .rotation3DEffect(Angle(degrees: tappedFlag == flag ? 360 : 0), axis: (x: 0, y: 1, z: 0))
+                                .opacity(isFadeOut && tappedFlag != flag ? 0.25 : 1.0)
+                                .scaleEffect(isFadeOut && tappedFlag != flag ? CGSize(width: 0.95, height: 0.95) : CGSize(width: 1, height: 1))
                         }
                     }
                 }
@@ -79,6 +86,12 @@ struct ContentView: View {
     }
 
     func flagTapped(_ flag: Int) {
+        withAnimation {
+            tappedFlag = flag
+        }
+        withAnimation(.interpolatingSpring(stiffness: 25, damping: 5)) {
+            isFadeOut.toggle()
+        }
         gamesCounter += 1
         if flag == correctAnswer {
             scoreTitle = "Correct!"
@@ -96,6 +109,10 @@ struct ContentView: View {
     func askQuestion() {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
+        tappedFlag = nil
+        withAnimation(.easeOut(duration: 0.25)) {
+            isFadeOut.toggle()
+        }
     }
 
     func resetAction() {
