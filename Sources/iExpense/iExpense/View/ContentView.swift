@@ -11,25 +11,36 @@ struct ContentView: View {
     @StateObject var expenses = Expenses()
     @State private var showingAddExpense = false
 
+    private let currencyCode = Locale.current.currency?.identifier ?? "USD"
+
     var body: some View {
         NavigationView {
             List {
-                ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type)
-                                .font(.caption)
+                ForEach(expenses.sections) { section in
+                    Section(section.type) {
+                        ForEach(section.items) { item in
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Text(item.name)
+                                        .font(.headline)
+                                    Text(item.type)
+                                        .font(.caption)
+                                }
+
+                                Spacer()
+
+                                Text(item.amount, format: .currency(code: currencyCode))
+                                    .padding()
+                                    .background(item.amount > 100 ? .red : (item.amount < 10 ? .green : .yellow ))
+                            }
                         }
-
-                        Spacer()
-
-                        Text(item.amount, format: .currency(code: "USD"))
+                        .onDelete { offset in
+                            removeItems(at: offset, in: section.id)
+                        }
                     }
                 }
-                .onDelete(perform: removeItems)
             }
+            .listStyle(.grouped)
             .navigationTitle("iExpense")
             .toolbar {
                 Button("Add") {
@@ -44,8 +55,8 @@ struct ContentView: View {
 }
 
 extension ContentView {
-    func removeItems(at offsets: IndexSet) {
-        expenses.items.remove(atOffsets: offsets)
+    func removeItems(at offsets: IndexSet, in index: Int) {
+        expenses.removeItems(at: offsets, in: index)
     }
 }
 

@@ -15,6 +15,8 @@ struct AddView: View {
     @State private var type = "Personal"
     @State private var amount = 0.0
 
+    private let currencyCode = Locale.current.currency?.identifier ?? "USD"
+
     let types = ["Business", "Personal"]
     var body: some View {
         NavigationView {
@@ -27,14 +29,14 @@ struct AddView: View {
                     }
                 }
 
-                TextField("Amount", value: $amount, format: .currency(code: "USD"))
+                TextField("Amount", value: $amount, format: .currency(code: currencyCode))
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("Add Expense")
             .toolbar {
                 Button("Save") {
                     let expense = ExpenseItem(name: name, type: type, amount: amount)
-                    expenses.items.append(expense)
+                    expenses.insert(item: expense)
                     dismiss()
                 }
             }
