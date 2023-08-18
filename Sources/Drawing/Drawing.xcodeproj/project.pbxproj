@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A2A35C02A8FECCC003186B2 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A35BF2A8FECCC003186B2 /* ArrowView.swift */; };
+		7A2A35C32A8FECED003186B2 /* ArrowShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A35C22A8FECED003186B2 /* ArrowShape.swift */; };
+		7A2A35C52A8FEE93003186B2 /* ColorCyclingRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A35C42A8FEE93003186B2 /* ColorCyclingRectangleView.swift */; };
+		7A2A35C72A8FEF18003186B2 /* ColorCyclingRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2A35C62A8FEF18003186B2 /* ColorCyclingRectangle.swift */; };
 		7A365FC42A88BAEA003A07D4 /* DrawingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A365FC32A88BAEA003A07D4 /* DrawingApp.swift */; };
 		7A365FC62A88BAEA003A07D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A365FC52A88BAEA003A07D4 /* ContentView.swift */; };
 		7A365FC82A88BAEA003A07D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A365FC72A88BAEA003A07D4 /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A2A35BF2A8FECCC003186B2 /* ArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
+		7A2A35C22A8FECED003186B2 /* ArrowShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowShape.swift; sourceTree = "<group>"; };
+		7A2A35C42A8FEE93003186B2 /* ColorCyclingRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCyclingRectangleView.swift; sourceTree = "<group>"; };
+		7A2A35C62A8FEF18003186B2 /* ColorCyclingRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCyclingRectangle.swift; sourceTree = "<group>"; };
 		7A365FC02A88BAEA003A07D4 /* Drawing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drawing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A365FC32A88BAEA003A07D4 /* DrawingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingApp.swift; sourceTree = "<group>"; };
 		7A365FC52A88BAEA003A07D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +40,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A2A35BE2A8FECBC003186B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A365FC52A88BAEA003A07D4 /* ContentView.swift */,
+				7A2A35BF2A8FECCC003186B2 /* ArrowView.swift */,
+				7A2A35C42A8FEE93003186B2 /* ColorCyclingRectangleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7A2A35C12A8FECDD003186B2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				7A2A35C22A8FECED003186B2 /* ArrowShape.swift */,
+				7A2A35C62A8FEF18003186B2 /* ColorCyclingRectangle.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		7A365FB72A88BAE9003A07D4 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +78,9 @@
 		7A365FC22A88BAEA003A07D4 /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
+				7A2A35C12A8FECDD003186B2 /* UI */,
+				7A2A35BE2A8FECBC003186B2 /* View */,
 				7A365FC32A88BAEA003A07D4 /* DrawingApp.swift */,
-				7A365FC52A88BAEA003A07D4 /* ContentView.swift */,
 				7A365FC72A88BAEA003A07D4 /* Assets.xcassets */,
 				7A365FC92A88BAEA003A07D4 /* Preview Content */,
 			);
@@ -137,8 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A2A35C52A8FEE93003186B2 /* ColorCyclingRectangleView.swift in Sources */,
 				7A365FC62A88BAEA003A07D4 /* ContentView.swift in Sources */,
 				7A365FC42A88BAEA003A07D4 /* DrawingApp.swift in Sources */,
+				7A2A35C72A8FEF18003186B2 /* ColorCyclingRectangle.swift in Sources */,
+				7A2A35C02A8FECCC003186B2 /* ArrowView.swift in Sources */,
+				7A2A35C32A8FECED003186B2 /* ArrowShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
