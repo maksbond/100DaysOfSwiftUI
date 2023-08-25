@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct CheckoutView: View {
-    @ObservedObject var order: Order
+    @ObservedObject var orderItem: OrderItem
 
     @State private var confirmationMessage = ""
     @State private var showingConfirmation = false
+
+    @State private var errorMessage = ""
+    @State private var showingError = false
 
     var body: some View {
         ScrollView {
@@ -25,7 +28,7 @@ struct CheckoutView: View {
                 }
                 .frame(height: 233)
 
-                Text("Your total is \(order.cost, format: .currency(code: "USD"))")
+                Text("Your total is \(orderItem.order.cost, format: .currency(code: "USD"))")
                     .font(.title)
 
                 Button("Place Order") {
@@ -43,12 +46,17 @@ struct CheckoutView: View {
         } message: {
             Text(confirmationMessage)
         }
+        .alert("Ooops! We have problem!", isPresented: $showingError) {
+            Button("OK") { }
+        } message: {
+            Text(errorMessage)
+        }
     }
 }
 
 extension CheckoutView {
     func placeOrder() async {
-        guard let encoded = try? JSONEncoder().encode(order) else {
+        guard let encoded = try? JSONEncoder().encode(orderItem.order) else {
             print("Failed to encode order")
             return
         }
@@ -61,9 +69,11 @@ extension CheckoutView {
         do {
             let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
             let decodedOrder = try JSONDecoder().decode(Order.self, from: data)
-            confirmationMessage = "Your order for \(decodedOrder.quantity)x \(Order.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
+            confirmationMessage = "Your order for \(decodedOrder.quantity)x \(OrderItem.types[decodedOrder.type].lowercased()) cupcakes is on its way!"
             showingConfirmation = true
         } catch {
+            errorMessage = error.localizedDescription
+            showingError = true
             print("Checkout failed.")
         }
     }
@@ -72,7 +82,7 @@ extension CheckoutView {
 struct CheckoutView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            CheckoutView(order: Order())
+            CheckoutView(orderItem: OrderItem())
         }
     }
 }
