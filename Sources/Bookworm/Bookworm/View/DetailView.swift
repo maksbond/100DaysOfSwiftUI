@@ -30,13 +30,25 @@ struct DetailView: View {
                     .background(.black.opacity(0.75))
                     .clipShape(Capsule())
                     .offset(x: -5, y: -5)
+
+                HStack {
+                    Text(book.date ?? Date.now, style: .date)
+                        .font(.caption)
+                        .fontWeight(.black)
+                        .padding(8)
+                        .foregroundColor(.white)
+                        .background(.black.opacity(0.75))
+                        .clipShape(Capsule())
+                    Spacer()
+                }
+                .offset(x: 5, y: -5)
             }
 
             Text(book.author ?? "Unknown author")
                 .font(.title)
                 .foregroundColor(.secondary)
 
-            Text(book.review ?? "No review")
+            Text(book.review?.isEmpty ?? true ? "No Review" : (book.review ?? "No review"))
                 .padding()
 
             RatingView(rating: .constant(Int(book.rating)))
