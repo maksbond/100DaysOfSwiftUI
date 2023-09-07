@@ -13,6 +13,9 @@
 		7AD608012AA7FA9F002B7CE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7AD608002AA7FA9F002B7CE8 /* Preview Assets.xcassets */; };
 		7AD608092AA7FAE5002B7CE8 /* CoreDataProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AD608072AA7FAE5002B7CE8 /* CoreDataProject.xcdatamodeld */; };
 		7AD6080B2AA7FAF1002B7CE8 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD6080A2AA7FAF1002B7CE8 /* DataController.swift */; };
+		7AD6080D2AAA8373002B7CE8 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD6080C2AAA8373002B7CE8 /* FilteredList.swift */; };
+		7AD608142AAA84F5002B7CE8 /* Singer+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD608122AAA84F5002B7CE8 /* Singer+CoreDataClass.swift */; };
+		7AD608152AAA84F5002B7CE8 /* Singer+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD608132AAA84F5002B7CE8 /* Singer+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		7AD608002AA7FA9F002B7CE8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7AD608082AA7FAE5002B7CE8 /* CoreDataProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataProject.xcdatamodel; sourceTree = "<group>"; };
 		7AD6080A2AA7FAF1002B7CE8 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		7AD6080C2AAA8373002B7CE8 /* FilteredList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
+		7AD608122AAA84F5002B7CE8 /* Singer+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7AD608132AAA84F5002B7CE8 /* Singer+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Singer+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,12 +61,12 @@
 		7AD607F82AA7FA9E002B7CE8 /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				7AD608172AAA8609002B7CE8 /* View */,
+				7AD608162AAA85FB002B7CE8 /* CoreData */,
 				7AD607F92AA7FA9E002B7CE8 /* CoreDataProjectApp.swift */,
-				7AD607FB2AA7FA9E002B7CE8 /* ContentView.swift */,
 				7AD607FD2AA7FA9F002B7CE8 /* Assets.xcassets */,
 				7AD607FF2AA7FA9F002B7CE8 /* Preview Content */,
 				7AD608072AA7FAE5002B7CE8 /* CoreDataProject.xcdatamodeld */,
-				7AD6080A2AA7FAF1002B7CE8 /* DataController.swift */,
 			);
 			path = CoreDataProject;
 			sourceTree = "<group>";
@@ -71,6 +77,25 @@
 				7AD608002AA7FA9F002B7CE8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7AD608162AAA85FB002B7CE8 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7AD6080A2AA7FAF1002B7CE8 /* DataController.swift */,
+				7AD608122AAA84F5002B7CE8 /* Singer+CoreDataClass.swift */,
+				7AD608132AAA84F5002B7CE8 /* Singer+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		7AD608172AAA8609002B7CE8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7AD6080C2AAA8373002B7CE8 /* FilteredList.swift */,
+				7AD607FB2AA7FA9E002B7CE8 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +168,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AD608152AAA84F5002B7CE8 /* Singer+CoreDataProperties.swift in Sources */,
 				7AD607FC2AA7FA9E002B7CE8 /* ContentView.swift in Sources */,
 				7AD6080B2AA7FAF1002B7CE8 /* DataController.swift in Sources */,
+				7AD6080D2AAA8373002B7CE8 /* FilteredList.swift in Sources */,
 				7AD607FA2AA7FA9E002B7CE8 /* CoreDataProjectApp.swift in Sources */,
 				7AD608092AA7FAE5002B7CE8 /* CoreDataProject.xcdatamodeld in Sources */,
+				7AD608142AAA84F5002B7CE8 /* Singer+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
