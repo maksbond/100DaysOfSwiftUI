@@ -5,15 +5,16 @@
 //  Created by Maksym Bondar on 08.09.2023.
 //
 
+import CoreData
 import SwiftUI
 
 struct UserDetails: View {
-    let user: User
+    let user: CachedUser
     var body: some View {
         ScrollView(.vertical) {
             Section("User info") {
                 HStack {
-                    Text("ID: \(user.id)")
+                    Text("ID: \(user.wrappedID)")
                         .font(.headline)
                     Spacer()
 
@@ -23,13 +24,13 @@ struct UserDetails: View {
 
                 Group {
                     HStack {
-                        Text("Company: \(user.company)")
+                        Text("Company: \(user.wrappedCompany)")
                         Spacer()
                     }
                     .padding(.horizontal)
 
                     HStack {
-                        Text("Address: \(user.address)")
+                        Text("Address: \(user.wrappedAddress)")
                         Spacer()
                     }
                     .padding(.horizontal)
@@ -42,12 +43,12 @@ struct UserDetails: View {
                         .font(.subheadline)
                     Spacer()
 
-                    Text(user.registered, format: .dateTime)
+                    Text(user.wrappedRegistred, format: .dateTime)
                         .font(.subheadline)
                 }
                 .padding()
 
-                Text(user.about)
+                Text(user.wrappedAbout)
                     .font(.body)
                     .padding()
             }
@@ -56,7 +57,7 @@ struct UserDetails: View {
                 HStack {
                     ScrollView(.horizontal) {
                         HStack {
-                            ForEach(user.tags, id: \.self) { tag in
+                            ForEach(user.wrappedTags, id: \.self) { tag in
                                 Text(tag)
                                     .font(.body)
                                     .padding(4)
@@ -71,16 +72,16 @@ struct UserDetails: View {
             }
 
             Section("Friends list") {
-                ForEach(user.friends) { friend in
+                ForEach(user.wrappedFriends) { friend in
                     VStack {
                         HStack {
-                            Text(friend.name)
+                            Text(friend.wrappedName)
                                 .font(.headline)
                             Spacer()
                         }
 
                         HStack {
-                            Text(friend.id)
+                            Text(friend.wrappedID)
                                 .font(.subheadline)
                             Spacer()
                         }
@@ -89,28 +90,28 @@ struct UserDetails: View {
                 .padding(.horizontal)
             }
         }
-        .navigationTitle(user.name)
+        .navigationTitle(user.wrappedName)
     }
 }
 
-struct UserDetails_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            UserDetails(user: User(id: "1",
-                                   isActive: true,
-                                   name: "Test 1",
-                                   age: 10,
-                                   company: "Test 1",
-                                   email: "test@gmail.com",
-                                   address: "random 14",
-                                   about: "jhflkajlk fjldjglj ldjgj ",
-                                   registered: Date.now,
-                                   tags: ["12342", "2324234 "],
-                                   friends: [
-                                        Friend(id: "3", name: "Test 3"),
-                                        Friend(id: "4", name: "Test 4"),
-                                   ]
-                        ))
-        }
-    }
-}
+//struct UserDetails_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
+//            UserDetails(user: User(id: "1",
+//                                   isActive: true,
+//                                   name: "Test 1",
+//                                   age: 10,
+//                                   company: "Test 1",
+//                                   email: "test@gmail.com",
+//                                   address: "random 14",
+//                                   about: "jhflkajlk fjldjglj ldjgj ",
+//                                   registered: Date.now,
+//                                   tags: ["12342", "2324234 "],
+//                                   friends: [
+//                                        Friend(id: "3", name: "Test 3"),
+//                                        Friend(id: "4", name: "Test 4"),
+//                                   ]
+//                        ))
+//        }
+//    }
+//}

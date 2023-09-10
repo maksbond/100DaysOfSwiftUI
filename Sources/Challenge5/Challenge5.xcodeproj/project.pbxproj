@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A2D27E72AAE1E0B0067419E /* Challenge5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A2D27E52AAE1E0B0067419E /* Challenge5.xcdatamodeld */; };
+		7A2D27EA2AAE1E6C0067419E /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2D27E92AAE1E6C0067419E /* DataController.swift */; };
+		7A2D27ED2AAE233F0067419E /* CachedUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2D27EB2AAE233F0067419E /* CachedUser+CoreDataClass.swift */; };
+		7A2D27EE2AAE233F0067419E /* CachedUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2D27EC2AAE233F0067419E /* CachedUser+CoreDataProperties.swift */; };
+		7A2D27F12AAE23640067419E /* CachedFriend+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2D27EF2AAE23640067419E /* CachedFriend+CoreDataClass.swift */; };
+		7A2D27F22AAE23640067419E /* CachedFriend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2D27F02AAE23640067419E /* CachedFriend+CoreDataProperties.swift */; };
 		7A9A18242AABCCEE00D15671 /* Challenge5App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9A18232AABCCEE00D15671 /* Challenge5App.swift */; };
 		7A9A18262AABCCEE00D15671 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9A18252AABCCEE00D15671 /* ContentView.swift */; };
 		7A9A18282AABCCEF00D15671 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A9A18272AABCCEF00D15671 /* Assets.xcassets */; };
@@ -20,6 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A2D27E62AAE1E0B0067419E /* Challenge5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Challenge5.xcdatamodel; sourceTree = "<group>"; };
+		7A2D27E92AAE1E6C0067419E /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		7A2D27EB2AAE233F0067419E /* CachedUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7A2D27EC2AAE233F0067419E /* CachedUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7A2D27EF2AAE23640067419E /* CachedFriend+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedFriend+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7A2D27F02AAE23640067419E /* CachedFriend+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CachedFriend+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7A9A18202AABCCEE00D15671 /* Challenge5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A9A18232AABCCEE00D15671 /* Challenge5App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge5App.swift; sourceTree = "<group>"; };
 		7A9A18252AABCCEE00D15671 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +56,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A2D27E82AAE1E600067419E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7A2D27E92AAE1E6C0067419E /* DataController.swift */,
+				7A2D27EB2AAE233F0067419E /* CachedUser+CoreDataClass.swift */,
+				7A2D27EC2AAE233F0067419E /* CachedUser+CoreDataProperties.swift */,
+				7A2D27EF2AAE23640067419E /* CachedFriend+CoreDataClass.swift */,
+				7A2D27F02AAE23640067419E /* CachedFriend+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		7A9A18172AABCCEE00D15671 = {
 			isa = PBXGroup;
 			children = (
@@ -63,11 +87,13 @@
 		7A9A18222AABCCEE00D15671 /* Challenge5 */ = {
 			isa = PBXGroup;
 			children = (
+				7A2D27E82AAE1E600067419E /* CoreData */,
 				7A9A18322AABCD0300D15671 /* Model */,
 				7A9A18312AABCCFD00D15671 /* View */,
 				7A9A18232AABCCEE00D15671 /* Challenge5App.swift */,
 				7A9A18272AABCCEF00D15671 /* Assets.xcassets */,
 				7A9A18292AABCCEF00D15671 /* Preview Content */,
+				7A2D27E52AAE1E0B0067419E /* Challenge5.xcdatamodeld */,
 			);
 			path = Challenge5;
 			sourceTree = "<group>";
@@ -172,11 +198,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A9A18262AABCCEE00D15671 /* ContentView.swift in Sources */,
+				7A2D27F12AAE23640067419E /* CachedFriend+CoreDataClass.swift in Sources */,
 				7A9A18242AABCCEE00D15671 /* Challenge5App.swift in Sources */,
 				7A9A18392AABD3F500D15671 /* UsersListView.swift in Sources */,
 				7A9A183B2AABD56300D15671 /* UserRow.swift in Sources */,
+				7A2D27EE2AAE233F0067419E /* CachedUser+CoreDataProperties.swift in Sources */,
 				7A9A183D2AABD6C800D15671 /* UserDetails.swift in Sources */,
+				7A2D27F22AAE23640067419E /* CachedFriend+CoreDataProperties.swift in Sources */,
+				7A2D27EA2AAE1E6C0067419E /* DataController.swift in Sources */,
 				7A9A18342AABCD2100D15671 /* User.swift in Sources */,
+				7A2D27E72AAE1E0B0067419E /* Challenge5.xcdatamodeld in Sources */,
+				7A2D27ED2AAE233F0067419E /* CachedUser+CoreDataClass.swift in Sources */,
 				7A9A18362AABCE4200D15671 /* Friend.swift in Sources */,
 				7A9A183F2AABEB8F00D15671 /* UserActivityIndicator.swift in Sources */,
 			);
@@ -379,6 +411,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7A2D27E52AAE1E0B0067419E /* Challenge5.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7A2D27E62AAE1E0B0067419E /* Challenge5.xcdatamodel */,
+			);
+			currentVersion = 7A2D27E62AAE1E0B0067419E /* Challenge5.xcdatamodel */;
+			path = Challenge5.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7A9A18182AABCCEE00D15671 /* Project object */;
 }

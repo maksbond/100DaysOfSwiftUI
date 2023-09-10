@@ -5,6 +5,7 @@
 //  Created by Maksym Bondar on 08.09.2023.
 //
 
+import CoreData
 import SwiftUI
 
 struct ContentView: View {
@@ -15,13 +16,7 @@ struct ContentView: View {
 
     var body: some View {
         NavigationView {
-            Group {
-                if users.isEmpty {
-                    ProgressView()
-                } else {
-                    UsersListView(users: $users)
-                }
-            }
+            UsersListView(users: $users)
             .navigationTitle("Users")
         }
         .task {
