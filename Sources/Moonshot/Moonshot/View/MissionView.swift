@@ -25,6 +25,7 @@ struct MissionView: View {
                         .scaledToFit()
                         .frame(maxWidth: geometry.size.width * 0.6)
                         .padding(.top)
+                        .accessibilityLabel(mission.displayName)
 
 
                     VStack(alignment: .leading) {
@@ -41,6 +42,8 @@ struct MissionView: View {
 
                             Spacer()
                         }
+                        .accessibilityElement()
+                        .accessibilityLabel("Launch date: \(mission.formattedLaunchDate)")
 
                         CustomDivider()
 

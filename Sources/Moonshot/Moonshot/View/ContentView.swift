@@ -54,6 +54,10 @@ struct ContentView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(.lightBackground)
                             }
+                            .accessibilityElement()
+                            .accessibilityLabel("Mission: \(mission.displayName))")
+                            .accessibilityHint("Launched on \(mission.formattedLaunchDate)")
+
                         }
                     }
                 }

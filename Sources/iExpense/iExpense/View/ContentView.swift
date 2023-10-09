@@ -12,6 +12,11 @@ struct ContentView: View {
     @State private var showingAddExpense = false
 
     private let currencyCode = Locale.current.currency?.identifier ?? "USD"
+    private let currencyFormatter: NumberFormatter = {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        return formatter
+    }()
 
     var body: some View {
         NavigationView {
@@ -33,6 +38,9 @@ struct ContentView: View {
                                     .padding()
                                     .background(item.amount > 100 ? .red : (item.amount < 10 ? .green : .yellow ))
                             }
+                            .accessibilityElement()
+                            .accessibilityLabel("\(item.name), \(currencyFormatter.string(from: NSNumber(value: item.amount)) ?? "Unknown value")")
+                            .accessibilityHint(item.type)
                         }
                         .onDelete { offset in
                             removeItems(at: offset, in: section.id)
