@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "664C538A-4332-4A08-B5D3-AB66DE031681"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "466ADBC1-F165-40D6-9BAB-B6392272E978"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Challenge6/ViewModel/ContentView+ViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "createNewBuddy(with:name:description:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "466ADBC1-F165-40D6-9BAB-B6392272E978 - c994d0fba0b04b78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Challenge6.ContentView.ViewModel.createNewBuddy(with: __C.UIImage, name: Swift.String, description: Swift.String) -&gt; ()"
+                  moduleName = "Challenge6"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksbond/Developer/Practice/100DaysOfSwiftUI/Sources/Challenge6/Challenge6/ViewModel/ContentView+ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "812">
+               </Location>
+               <Location
+                  uuid = "466ADBC1-F165-40D6-9BAB-B6392272E978 - c994d0fba0b04b78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Challenge6.ContentView.ViewModel.createNewBuddy(with: __C.UIImage, name: Swift.String, description: Swift.String) -&gt; ()"
+                  moduleName = "Challenge6"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksbond/Developer/Practice/100DaysOfSwiftUI/Sources/Challenge6/Challenge6/ViewModel/ContentView+ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "856">
+               </Location>
+               <Location
+                  uuid = "466ADBC1-F165-40D6-9BAB-B6392272E978 - c994d0fba0b04b78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Challenge6.ContentView.ViewModel.createNewBuddy(with: __C.UIImage, name: Swift.String, description: Swift.String) -&gt; ()"
+                  moduleName = "Challenge6"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksbond/Developer/Practice/100DaysOfSwiftUI/Sources/Challenge6/Challenge6/ViewModel/ContentView+ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "960">
+               </Location>
+               <Location
+                  uuid = "466ADBC1-F165-40D6-9BAB-B6392272E978 - c994d0fba0b04b78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Challenge6.ContentView.ViewModel.createNewBuddy(with: __C.UIImage, name: Swift.String, description: Swift.String) -&gt; ()"
+                  moduleName = "Challenge6"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksbond/Developer/Practice/100DaysOfSwiftUI/Sources/Challenge6/Challenge6/ViewModel/ContentView+ViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "648">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DD6E1573-8268-46DD-BFB7-934C4F03DD58"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Challenge6/Model/NewBuddy.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "image"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "DD6E1573-8268-46DD-BFB7-934C4F03DD58 - f4cdc970104a3127"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Challenge6.NewBuddy.image.getter : __C.UIImage"
+                  moduleName = "Challenge6"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksbond/Developer/Practice/100DaysOfSwiftUI/Sources/Challenge6/Challenge6/Model/NewBuddy.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "384">
+               </Location>
+               <Location
+                  uuid = "DD6E1573-8268-46DD-BFB7-934C4F03DD58 - f4cdc970104a3127"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Challenge6.NewBuddy.image.getter : __C.UIImage"
+                  moduleName = "Challenge6"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksbond/Developer/Practice/100DaysOfSwiftUI/Sources/Challenge6/Challenge6/Model/NewBuddy.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "260">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
