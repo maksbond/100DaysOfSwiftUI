@@ -27,7 +27,7 @@ extension ContentView {
             }
         }
 
-        func createNewBuddy(with image: UIImage, name: String, description: String) {
+        func createNewBuddy(with image: UIImage, name: String, description: String, location: Location?) {
             guard let jpegData = image.jpegData(compressionQuality: 0.8) else {
                 isErrorShown = true
                 errorMessage = "Can't decode image!"
@@ -39,7 +39,7 @@ extension ContentView {
             let url = savePath.appending(component: imageName, directoryHint: .notDirectory)
             do {
                 try jpegData.write(to: url, options: [.atomic, .completeFileProtection])
-                let newBuddy = NewBuddy(id: id, imageName: imageName, name: name, description: description)
+                let newBuddy = NewBuddy(id: id, imageName: imageName, name: name, description: description, location: location)
                 buddies.append(newBuddy)
                 save()
             } catch {

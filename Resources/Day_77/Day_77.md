@@ -2,7 +2,7 @@
 
 ## Description
 
-Day 77 was a challenge #6 project.
+Day 77 was a first day of Challenge6 project.
 
 ## Tasks
 

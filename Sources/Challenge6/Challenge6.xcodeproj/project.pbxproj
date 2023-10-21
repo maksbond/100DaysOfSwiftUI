@@ -17,6 +17,8 @@
 		7A96D2E12ADE005C00AF814D /* NewBuddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96D2E02ADE005C00AF814D /* NewBuddy.swift */; };
 		7A96D2E32AE20A6700AF814D /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96D2E22AE20A6700AF814D /* EditView.swift */; };
 		7A96D2E52AE20B6C00AF814D /* EditView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A96D2E42AE20B6C00AF814D /* EditView+ViewModel.swift */; };
+		7AA13D322AE55DB000AC7B22 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA13D312AE55DB000AC7B22 /* LocationFetcher.swift */; };
+		7AA13D352AE561E700AC7B22 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AA13D342AE561E700AC7B22 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		7A96D2E02ADE005C00AF814D /* NewBuddy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBuddy.swift; sourceTree = "<group>"; };
 		7A96D2E22AE20A6700AF814D /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		7A96D2E42AE20B6C00AF814D /* EditView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditView+ViewModel.swift"; sourceTree = "<group>"; };
+		7AA13D312AE55DB000AC7B22 /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
+		7AA13D332AE55DE000AC7B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		7AA13D342AE561E700AC7B22 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +68,7 @@
 		7A96D2C62ADDFEA500AF814D /* Challenge6 */ = {
 			isa = PBXGroup;
 			children = (
+				7AA13D332AE55DE000AC7B22 /* Info.plist */,
 				7A96D2DD2ADE000D00AF814D /* ViewModel */,
 				7A96D2D62ADDFF4C00AF814D /* Model */,
 				7A96D2D52ADDFF4600AF814D /* View */,
@@ -93,9 +99,11 @@
 		7A96D2D62ADDFF4C00AF814D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7AA13D342AE561E700AC7B22 /* Location.swift */,
 				7A96D2D92ADDFF6F00AF814D /* ImagePicker.swift */,
 				7A96D2DB2ADDFFE500AF814D /* FileManager+DocumentsDirectory.swift */,
 				7A96D2E02ADE005C00AF814D /* NewBuddy.swift */,
+				7AA13D312AE55DB000AC7B22 /* LocationFetcher.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,12 +189,14 @@
 			files = (
 				7A96D2CA2ADDFEA500AF814D /* ContentView.swift in Sources */,
 				7A96D2DA2ADDFF6F00AF814D /* ImagePicker.swift in Sources */,
+				7AA13D352AE561E700AC7B22 /* Location.swift in Sources */,
 				7A96D2E12ADE005C00AF814D /* NewBuddy.swift in Sources */,
 				7A96D2E52AE20B6C00AF814D /* EditView+ViewModel.swift in Sources */,
 				7A96D2DC2ADDFFE500AF814D /* FileManager+DocumentsDirectory.swift in Sources */,
 				7A96D2E32AE20A6700AF814D /* EditView.swift in Sources */,
 				7A96D2C82ADDFEA500AF814D /* Challenge6App.swift in Sources */,
 				7A96D2DF2ADE001B00AF814D /* ContentView+ViewModel.swift in Sources */,
+				7AA13D322AE55DB000AC7B22 /* LocationFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +328,8 @@
 				DEVELOPMENT_TEAM = C98X7R8QA5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Challenge6/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need access your location for location tracking for place saving";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -347,6 +359,8 @@
 				DEVELOPMENT_TEAM = C98X7R8QA5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Challenge6/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need access your location for location tracking for place saving";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

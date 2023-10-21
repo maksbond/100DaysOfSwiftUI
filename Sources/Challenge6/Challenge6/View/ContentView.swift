@@ -5,6 +5,7 @@
 //  Created by Maksym Bondar on 16.10.2023.
 //
 
+import MapKit
 import SwiftUI
 
 struct ContentView: View {
@@ -18,6 +19,30 @@ struct ContentView: View {
                         Image(uiImage: buddy.image)
                             .resizable()
                             .scaledToFit()
+                        if let location = buddy.location,
+                           let region = buddy.mapCoordinateRegion {
+                            Map(coordinateRegion: Binding(get: {
+                                region
+                            }, set: { _ in
+                            }), annotationItems: [location]) { location in
+                                MapAnnotation(coordinate: location.coordinate) {
+                                    VStack {
+                                        Image(systemName: "star.circle")
+                                            .resizable()
+                                            .foregroundColor(.red)
+                                            .frame(width: 44, height: 44)
+                                            .background(.white)
+                                            .clipShape(Circle())
+
+                                        Text(location.name)
+                                            .fixedSize()
+                                    }
+                                }
+                            }
+                            .frame(height: 100)
+                            .padding()
+                            .disabled(true)
+                        }
                     } label: {
                         HStack {
                             Image(uiImage: buddy.image)
@@ -51,8 +76,8 @@ struct ContentView: View {
             }
             .sheet(item: $viewModel.selectedImage) { image in
                 NavigationView {
-                    EditView(image: image) { image, name, description in
-                        viewModel.createNewBuddy(with: image, name: name, description: description)
+                    EditView(image: image) { image, name, description, location in
+                        viewModel.createNewBuddy(with: image, name: name, description: description, location: location)
                     }
                 }
             }
