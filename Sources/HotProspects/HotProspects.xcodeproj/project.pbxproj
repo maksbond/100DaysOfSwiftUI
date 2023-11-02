@@ -11,6 +11,7 @@
 		7A0806C32AE9E93E003A7974 /* MeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0806C22AE9E93E003A7974 /* MeView.swift */; };
 		7A0806C52AE9EAB7003A7974 /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0806C42AE9EAB7003A7974 /* Prospect.swift */; };
 		7A965DF12AF32900006532A1 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A965DF02AF32900006532A1 /* ImageSaver.swift */; };
+		7A965DF32AF33254006532A1 /* FileManager+DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A965DF22AF33254006532A1 /* FileManager+DocumentsDirectory.swift */; };
 		7ADE6CB62AEDB99E00A149F9 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 7ADE6CB52AEDB99E00A149F9 /* CodeScanner */; };
 		7AF10E702AE4679B0081723F /* HotProspectsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF10E6F2AE4679B0081723F /* HotProspectsApp.swift */; };
 		7AF10E722AE4679B0081723F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF10E712AE4679B0081723F /* ContentView.swift */; };
@@ -23,6 +24,7 @@
 		7A0806C22AE9E93E003A7974 /* MeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeView.swift; sourceTree = "<group>"; };
 		7A0806C42AE9EAB7003A7974 /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 		7A965DF02AF32900006532A1 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
+		7A965DF22AF33254006532A1 /* FileManager+DocumentsDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FileManager+DocumentsDirectory.swift"; path = "../../BucketList/BucketList/FileManager+DocumentsDirectory.swift"; sourceTree = "<group>"; };
 		7AF10E6C2AE4679B0081723F /* HotProspects.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotProspects.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AF10E6F2AE4679B0081723F /* HotProspectsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotProspectsApp.swift; sourceTree = "<group>"; };
 		7AF10E712AE4679B0081723F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		7AF10E6E2AE4679B0081723F /* HotProspects */ = {
 			isa = PBXGroup;
 			children = (
+				7A965DF22AF33254006532A1 /* FileManager+DocumentsDirectory.swift */,
 				7AF10E6F2AE4679B0081723F /* HotProspectsApp.swift */,
 				7A0806C02AE9E92E003A7974 /* ProspectsView.swift */,
 				7A0806C22AE9E93E003A7974 /* MeView.swift */,
@@ -159,6 +162,7 @@
 			files = (
 				7A0806C32AE9E93E003A7974 /* MeView.swift in Sources */,
 				7A965DF12AF32900006532A1 /* ImageSaver.swift in Sources */,
+				7A965DF32AF33254006532A1 /* FileManager+DocumentsDirectory.swift in Sources */,
 				7A0806C52AE9EAB7003A7974 /* Prospect.swift in Sources */,
 				7A0806C12AE9E92E003A7974 /* ProspectsView.swift in Sources */,
 				7AF10E722AE4679B0081723F /* ContentView.swift in Sources */,

@@ -11,23 +11,22 @@ class Prospect: Identifiable, Codable {
     var id = UUID()
     var name = "Anonymous"
     var emailAddress = ""
+    var addDate = Date.now
     fileprivate(set) var isContacted = false
 }
 
 @MainActor class Prospects: ObservableObject {
-    private let saveKey = "SavedData"
+    private let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedPeople")
 
     @Published private(set) var people: [Prospect]
 
     init() {
-        if let data = UserDefaults.standard.data(forKey: saveKey) {
-            if let decoded = try? JSONDecoder().decode([Prospect].self, from: data) {
-                people = decoded
-                return
-            }
+        do {
+            let data = try Data(contentsOf: savePath)
+            people = try JSONDecoder().decode([Prospect].self, from: data)
+        } catch {
+            people = []
         }
-
-        people = []
     }
 
     func add(_ prospect: Prospect) {
@@ -44,8 +43,11 @@ class Prospect: Identifiable, Codable {
 
 private extension Prospects {
     func save() {
-        if let encoded = try? JSONEncoder().encode(people) {
-            UserDefaults.standard.set(encoded, forKey: saveKey)
+        do {
+            let data = try JSONEncoder().encode(people)
+            try data.write(to: savePath, options: [.atomic, .completeFileProtection])
+        } catch {
+            print("Unable to save data.")
         }
     }
 }

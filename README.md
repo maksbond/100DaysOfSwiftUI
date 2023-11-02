@@ -90,10 +90,10 @@ This repository will be used to track my progress with [100 Days of SwiftUI](htt
 * [Day 82](/Resources/Day_82/Day_82.md)
 * [Day 83](/Resources/Day_83/Day_83.md)
 * [Day 84](/Resources/Day_84/Day_84.md)
+* [Day 85](/Resources/Day_85/Day_85.md)
 
 ## Days left
 
-* [Day 85](/Resources/404.png)
 * [Day 86](/Resources/404.png)
 * [Day 87](/Resources/404.png)
 * [Day 88](/Resources/404.png)
@@ -103,5 +103,6 @@ This repository will be used to track my progress with [100 Days of SwiftUI](htt
 * [Day 92](/Resources/404.png)
 * [Day 93](/Resources/404.png)
 * [Day 94](/Resources/404.png)
+* [Day 95](/Resources/404.png)
 ...
 * [Day 100](/Resources/404.png)
