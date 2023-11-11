@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "4E7B657C-AB39-45C4-B2AD-A6E7C596F846"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C77B8F06-9680-4A27-8097-A9CD2FF2DEDE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Flashzilla/EditCards.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "addCard()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0EA4B3A-0259-4045-ABA2-1715F0051031"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Flashzilla/EditCards.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "addCard()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D827F150-93C8-4F97-88D5-13B3BC5E965C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Flashzilla/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "remove(card:isCorrect:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D827F150-93C8-4F97-88D5-13B3BC5E965C - 84294884c8a46c91"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Flashzilla.ContentView.remove(card: Flashzilla.Card, isCorrect: Swift.Bool) -&gt; ()"
+                  moduleName = "Flashzilla"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksbond/Developer/Practice/100DaysOfSwiftUI/Sources/Flashzilla/Flashzilla/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "684">
+               </Location>
+               <Location
+                  uuid = "D827F150-93C8-4F97-88D5-13B3BC5E965C - 84294884c8a46c91"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Flashzilla.ContentView.remove(card: Flashzilla.Card, isCorrect: Swift.Bool) -&gt; ()"
+                  moduleName = "Flashzilla"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksbond/Developer/Practice/100DaysOfSwiftUI/Sources/Flashzilla/Flashzilla/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "154"
+                  endingLineNumber = "154"
+                  offsetFromSymbolStart = "760">
+               </Location>
+               <Location
+                  uuid = "D827F150-93C8-4F97-88D5-13B3BC5E965C - 84294884c8a46cf6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Flashzilla.ContentView.remove(card: Flashzilla.Card, isCorrect: Swift.Bool) -&gt; ()"
+                  moduleName = "Flashzilla"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/maksbond/Developer/Practice/100DaysOfSwiftUI/Sources/Flashzilla/Flashzilla/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "760">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

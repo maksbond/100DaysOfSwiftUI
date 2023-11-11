@@ -24,11 +24,11 @@ struct EditCards: View {
                 }
 
                 Section {
-                    ForEach(0..<cards.count, id: \.self) { index in
+                    ForEach(cards) { card in
                         VStack(alignment: .leading) {
-                            Text(cards[index].prompt)
+                            Text(card.prompt)
                                 .font(.headline)
-                            Text(cards[index].answer)
+                            Text(card.answer)
                                 .foregroundColor(.secondary)
                         }
                     }
@@ -69,9 +69,15 @@ private extension EditCards {
         let trimmedAnswer = newAnswer.trimmingCharacters(in: .whitespaces)
         guard trimmedPrompt.isEmpty == false && trimmedAnswer.isEmpty == false else { return }
 
-        let card = Card(prompt: trimmedPrompt, answer: trimmedAnswer)
+        for index in 0..<cards.count {
+            cards[index].index += 1
+        }
+        let card = Card(prompt: trimmedPrompt,
+                        answer: trimmedAnswer, index: 0)
         cards.insert(card, at: 0)
         saveData()
+        newPrompt = ""
+        newAnswer = ""
     }
 
     func removeCards(at offsets: IndexSet) {

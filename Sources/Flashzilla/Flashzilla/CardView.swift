@@ -16,8 +16,8 @@ struct CardView: View {
     @State private var isShowingAnswer = false
     @State private var offset = CGSize.zero
 
-    let card: Card
-    var removal: (() -> Void)? = nil
+    var card: Card
+    var removal: ((_ success: Bool) -> Void)? = nil
 
     var body: some View {
         ZStack {
@@ -69,13 +69,14 @@ struct CardView: View {
                 }
                 .onEnded { _ in
                     if abs(offset.width) > 100 {
-                        if offset.width > 0 {
+                        let result = offset.width > 0
+                        if result {
                             feedback.notificationOccurred(.success)
                         } else {
                             feedback.notificationOccurred(.error)
                         }
 
-                        removal?()
+                        removal?(result)
                     } else {
                         offset = .zero
                     }
@@ -84,7 +85,10 @@ struct CardView: View {
         .onTapGesture {
             isShowingAnswer.toggle()
         }
-        .animation(.spring(), value: offset)
+        .onChange(of: card.index) { _, _ in
+            offset = .zero
+        }
+        .animation(.spring(bounce: 0), value: offset)
     }
 }
 
