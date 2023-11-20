@@ -101,11 +101,11 @@ This repository will be used to track my progress with [100 Days of SwiftUI](htt
 * [Day 93](/Resources/Day_93/Day_93.md)
 * [Day 94](/Resources/Day_94/Day_94.md)
 * [Day 95](/Resources/Day_95/Day_95.md)
-* [Day 96](/Resources/Day_95/Day_96.md)
+* [Day 96](/Resources/Day_96/Day_96.md)
+* [Day 97](/Resources/Day_97/Day_97.md)
 
 ## Days left
 
-* [Day 97](/Resources/404.png)
 * [Day 98](/Resources/404.png)
 * [Day 99](/Resources/404.png)
 * [Day 100](/Resources/404.png)
