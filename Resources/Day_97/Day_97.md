@@ -2,7 +2,7 @@
 
 ## Description
 
-Day 96 was a first day of SnowSeeker project!
+Day 96 was a second day of SnowSeeker project!
 
 ## Tasks
 
