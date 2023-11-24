@@ -17,17 +17,31 @@ extension View {
     }
 }
 
+private enum SortOrder {
+    case `default`, alphabetical, country
+}
+
 struct ContentView: View {
     @State private var searchText = ""
+    @State private var showingFilterOptions = false
+    @State private var sortingOrder = SortOrder.default
     @StateObject var favorites = Favorites()
 
     private let resorts: [Resort] = Bundle.main.decode("resorts.json")
 
     var filteredResorts: [Resort] {
-        if searchText.isEmpty {
-            return resorts
-        } else {
-            return resorts.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+        var result = resorts
+        if !searchText.isEmpty {
+            result = result.filter { $0.name.localizedCaseInsensitiveContains(searchText) }
+        }
+
+        switch sortingOrder {
+        case .default:
+            return result
+        case .alphabetical:
+            return result.sorted(by: { $0.name > $1.name})
+        case .country:
+            return result.sorted(by: { $0.country > $1.country})
         }
     }
 
@@ -68,6 +82,27 @@ struct ContentView: View {
             }
             .navigationTitle("Resorts")
             .searchable(text: $searchText, prompt: "Search for a resort")
+            .toolbar {
+                Button {
+                    showingFilterOptions.toggle()
+                } label: {
+                    Image(systemName: "line.3.horizontal.decrease.circle")
+                }
+
+            }
+            .confirmationDialog("Filter by", isPresented: $showingFilterOptions, titleVisibility: .visible) {
+                Button("Default") {
+                    sortingOrder = .default
+                }
+
+                Button("Alphabetical") {
+                    sortingOrder = .alphabetical
+                }
+
+                Button("Country") {
+                    sortingOrder = .country
+                }
+            }
 
             WelcomeView()
         }
